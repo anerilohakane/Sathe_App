@@ -15,10 +15,10 @@ const images = {
 
 export default function InwardDetails() {
   const customers = [
-    { name: "Jaispal Singh", status: "Delivered", items: "Cheese, Yogurt", icon: "check-circle-outline", image: "Jaispal" },
+    { name: "Jaispal Singh", status: "Delivered", items: "Cheese, Yogurt", icon: "check-circle", image: "Jaispal" },
     { name: "Siddhesh Deshmukh", status: "In Transit", items: "Butter, Cream", icon: "local-shipping", image: "Siddhesh" },
     { name: "Anirudha Kulkarni", status: "Cancel", items: "Milk, Butter", icon: "cancel", image: "Anirudha" },
-    { name: "Sai Pallavi", status: "Delivered", items: "Milk, Cheese", icon: "check-circle-outline", image: "SaiPallavi" },
+    { name: "Sai Pallavi", status: "Delivered", items: "Milk, Cheese", icon: "check-circle", image: "SaiPallavi" },
     { name: "Vikram Jadhav", status: "Pending", items: "Cheese, Yogurt", icon: "pending", image: "Vikram" },
     { name: "Mrunal Joshi", status: "In Transit", items: "Cheese, Yogurt", icon: "local-shipping", image: "Mrunal" },
   ];
