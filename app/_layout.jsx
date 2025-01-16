@@ -22,6 +22,7 @@ import InvoiceList from './Invoice/InvoiceList';
 import Customers from './Customers/customers';
 import Profile from './Profile';
 import Report from './Invoice/Report';
+import Invoice from './Invoice/Invoice';
 
 
 export default function Layout() {
@@ -51,7 +52,8 @@ export default function Layout() {
       {/* <InvoiceList></InvoiceList> */}
       {/* <Customers></Customers> */}
       {/* <Profile></Profile> */}
-      <Report></Report>
+      {/* <Report></Report> */}
+      <Invoice></Invoice>
     </View>
   );
 }
