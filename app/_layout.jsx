@@ -21,6 +21,7 @@ import WarehouseList from './Warehouse/WarehouseList';
 import InvoiceList from './Invoice/InvoiceList';
 import Customers from './Customers/customers';
 import Profile from './Profile';
+import Report from './Invoice/Report';
 
 
 export default function Layout() {
@@ -49,7 +50,8 @@ export default function Layout() {
       {/* <WarehouseList></WarehouseList> */}
       {/* <InvoiceList></InvoiceList> */}
       {/* <Customers></Customers> */}
-      <Profile></Profile>
+      {/* <Profile></Profile> */}
+      <Report></Report>
     </View>
   );
 }
