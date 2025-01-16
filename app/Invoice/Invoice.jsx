@@ -108,8 +108,8 @@ export default function Invoice() {
                     shadowOpacity: 0.25,
                     shadowRadius: 15,
                     elevation: 8,
-                }}
-            >
+                }}>
+            
                 <Text className="font-medium" style={{ fontSize: width * 0.045 }}>Total</Text>
                 <Text className="font-normal" style={{ fontSize: width * 0.04 }}>₹ 25,000</Text>
             </View>

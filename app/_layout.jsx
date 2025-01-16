@@ -23,6 +23,7 @@ import Customers from './Customers/customers';
 import Profile from './Profile';
 import Report from './Invoice/Report';
 import Invoice from './Invoice/Invoice';
+import SatheInvoice from './Invoice/satheInvoice';
 
 
 export default function Layout() {
@@ -53,7 +54,8 @@ export default function Layout() {
       {/* <Customers></Customers> */}
       {/* <Profile></Profile> */}
       {/* <Report></Report> */}
-      <Invoice></Invoice>
+      {/* <Invoice></Invoice> */}
+      <SatheInvoice></SatheInvoice>
     </View>
   );
 }
