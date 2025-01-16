@@ -59,8 +59,8 @@ export default function Product() {
                 <View className='flex-1 justify-center items-center'>
                     <TouchableOpacity
                         className='w-full h-[40px] rounded-md justify-center'
-                        style={{ backgroundColor: '#0CC0DF' }}
-                    >
+                        style={{ backgroundColor: '#0CC0DF' }}>
+                  
                         <Text className='text-white font-bold text-center text-xl'>Add Vegis</Text>
                     </TouchableOpacity>
                 </View>

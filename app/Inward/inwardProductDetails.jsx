@@ -1,13 +1,13 @@
-import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from "react-native";
 import React from "react";
+import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from "react-native";
 
-export default function OutwardDetails() {
+export default function InwardProductDetails() {
     return (
         <ScrollView>
             {/* Header Section */}
             <View className='flex-row rounded-md items-center justify-between px-4 py-3' style={{ backgroundColor: "#0CC0DF" }} >
                 <Image className='w-12 h-12 rounded-full' source={require("../../assets/images/1.png")} />
-                <Text className='font-semibold text-white text-3xl'>Outward</Text>
+                <Text className='font-semibold text-white text-3xl'>Inward</Text>
                 <Image className='w-12 h-12' source={require("../../assets/images/Menu.png")} />
             </View>
 
@@ -50,45 +50,32 @@ export default function OutwardDetails() {
 
             {/* Form Fields */}
             {[
+                { label: 'Source', placeholder: '' },
+                { label: 'Destination', placeholder: 'Ex. Warehouse A' },
                 { label: 'Category', placeholder: 'Ex. Purchased' },
+                { label: 'Warehouse', placeholder: 'Ex. Central Depot' },
+                { label: 'Vehicle Number', placeholder: 'Ex. MH 12 AD 1236' },
+                { label: 'Mobile Number', placeholder: 'Ex. 9595652525' },
                 { label: 'SKU', placeholder: 'Ex. SKU1236' },
-                { label: 'Rate', placeholder: 'Ex. 50000' },
-                { label: 'Quantity', placeholder: 'Ex. 1200' },
-                { label: 'Total', placeholder: 'Ex. 12000' },
-                { label: 'Vehicle Number', placeholder: 'Ex. MH 14 BB 7899' },
-                { label: 'Payment Type', placeholder: 'Ex. Cash' },
-                { label: 'Outstanding Amount', placeholder: 'Ex. 15000' },
-                { label: 'Source' },
-                { label: 'Destination' },
+                { label: 'Quantity In Bags/Cases', placeholder: 'Ex. 95' },
+                { label: 'Quantity in kg', placeholder: 'Ex. 55000' },
+                { label: 'Rate', placeholder: 'Ex. 60000' },
+                { label: 'Amount', placeholder: 'Ex. 764000' },
+                { label: 'Date', placeholder: '12/12/2023' },
+                { label: 'Supplier Contact Number', placeholder: 'Ex. 7984527457' },
+                { label: 'Invoice ID', placeholder: 'Ex. 1250' },
+                { label: 'Remark/Notes', placeholder: '', multiline: true }
             ].map((field, index) => (
                 <View key={index} className='mb-5 px-4'>
                     <Text className='text-xl font-normal mb-2'>{field.label}</Text>
                     <TextInput
                         className='border border-blue-500 p-2 rounded-lg h-[48px]'
-                        placeholder={field.placeholder}/>
+                        placeholder={field.placeholder}
+                        multiline={field.multiline || false}
+                    />
                 </View>
             ))}
 
-
-            {/* Driver and customer Details */}
-            <View className="px-4">
-                <Text className="font-bold text-2xl mb-5">Driver Information :</Text>
-                <Text className='text-xl font-normal mb-2'>Driver Name</Text>
-                <TextInput className='border border-blue-500 p-2 rounded-lg h-[48px] mb-5' placeholder="Ex. Anirudha Kulkarni"></TextInput>
-
-                <Text className='text-xl font-normal mb-2'>Driver Contact Number</Text>
-                <TextInput className='border border-blue-500 p-2 rounded-lg h-[48px] mb-5' placeholder="Ex. 9324537480"></TextInput>
-
-                <Text className="font-bold text-2xl mb-5">Customer Information :</Text>
-                <Text className='text-xl font-normal mb-2'>Customer Name</Text>
-                <TextInput className='border border-blue-500 p-2 rounded-lg h-[48px] mb-5' placeholder="Ex. Vikram Jadhav"></TextInput>
-
-                <Text className='text-xl font-normal mb-2'>Customer Contact Number</Text>
-                <TextInput className='border border-blue-500 p-2 rounded-lg h-[48px] mb-5' placeholder="Ex. 7789553429"></TextInput>
-
-                <Text className='text-xl font-normal mb-2'>Customer Address</Text>
-                <TextInput className='border border-blue-500 p-2 rounded-lg h-[48px] mb-5' placeholder="Ex. Shrirampur, Ahemadnagar"></TextInput>
-            </View>
 
 
             <View className="flex-1 justify-center items-center px-4">
@@ -107,6 +94,53 @@ export default function OutwardDetails() {
                     <Text className="text-black font-medium text-center text-xl">Mark as Review</Text>
                 </TouchableOpacity>
             </View>
-                </ScrollView >
-            );
+        </ScrollView>
+    );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

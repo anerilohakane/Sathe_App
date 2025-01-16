@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from "react-native";
 
-export default function Outward() {
+export default function OutwardDetails() {
     return (
         <ScrollView>
             {/* Header Section */}
