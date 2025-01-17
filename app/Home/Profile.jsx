@@ -1,116 +1,100 @@
 import React from "react";
-import { View, Text, ScrollView, Image, TouchableOpacity, Dimensions } from "react-native";
+import {
+    View,
+    Text,
+    ScrollView,
+    TouchableOpacity,
+    Dimensions,
+} from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons"; // For icons
 
 const { width, height } = Dimensions.get("window");
 
 export default function Profile() {
     return (
-        <ScrollView>
-            {/* Header Section */}
-            <View className='flex-row rounded-md items-center justify-between px-4 py-3' style={{ backgroundColor: "#0CC0DF" }} >
-                <Image className='w-12 h-12 rounded-full' source={require("../../assets/images/1.png")} />
-                <Text className='font-semibold text-white text-3xl'>User Profile</Text>
+        <>
+            <View className="flex-row h-39 justify-between items-center p-2 rounded-b-lg" style={{ backgroundColor: "#0CC0DF" }}>
+                <Icon name="person" size={width * 0.133} color="#FFF" />
+                <Text className="text-white font-bold text-2xl">User Profile</Text>
                 <TouchableOpacity>
-                    <Icon name="menu" color="white" size={width * 0.1} /> {/* Adjusted icon size */}
+                    <Icon name="menu" color="#FFF" size={width * 0.08} />
                 </TouchableOpacity>
             </View>
+            <ScrollView className="w-full">
 
-            {/* Spacing */}
-            <View className='h-10' />
-
-            <View className="flex-col justify-center items-center">
-                <Image style={{ width: width * 0.22, height: height * 0.1 }} source={require("../../assets/images/Profile.png")} />
-            </View>
-
-            <View className='h-8' />
-
-            {/* User Info */}
-            <View className="flex-col justify-center items-center">
-                <Text className="text-2xl font-bold">Sairaj Patil</Text> {/* Wrapped within <Text> */}
-                <Text className="text-sm font-light">+91 8467349820</Text> {/* Wrapped within <Text> */}
-                <Text className="text-sm font-light">Admin</Text> {/* Wrapped within <Text> */}
-            </View>
-
-            <View className="h-8"></View>
-
-            {/* Setting Option 1: Account Settings */}
-            <View className='bg-white flex-row pl-4 rounded-md items-center justify-start' style={{
-                width: width * 1,
-                height: height * 0.07,
-                marginBottom: 15,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 10 },
-                shadowOpacity: 0.25,
-                shadowRadius: 15,
-                elevation: 8,
-            }}>
-                <TouchableOpacity>
-                    <Icon name="settings" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-                <View className="px-3">
-                    <Text className="font-bold text-xl">Account Settings</Text>
+                {/* Profile Picture Placeholder */}
+                <View className=" flex-row w-full items-center justify-center">
+                    <Icon name="person" size={100} color="#FFF" className="p-5 mt-5 bg-slate-200 rounded-full" />
                 </View>
-                <TouchableOpacity style={{ position: "absolute", right: width * 0.01 }}>
-                    <Icon name="navigate-next" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-            </View>
 
-            {/* Setting Option 2: Manage Users */}
-            <View className='bg-white flex-row pl-4 rounded-md items-center justify-start' style={{
-                width: width * 1,
-                height: height * 0.07,
-                marginBottom: 15,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 10 },
-                shadowOpacity: 0.25,
-                shadowRadius: 15,
-                elevation: 8,
-            }}>
-                <TouchableOpacity>
-                    <Icon name="supervisor-account" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-                <View className="px-3 flex-row">
-                    <Text className="font-bold text-xl">Manage Users</Text>
+                {/* User Info */}
+                <View className=" py-5 items-center">
+                    <Text className="font-extrabold text-xl">Sairaj Patil</Text>
+                    <Text>+91 8467349820</Text>
+                    <Text>Admin</Text>
                 </View>
-                <TouchableOpacity style={{ position: "absolute", right: width * 0.01 }}>
-                    <Icon name="navigate-next" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-            </View>
 
-            {/* Setting Option 3: Customization and Personalization */}
-            <View className='bg-white flex-row pl-4 rounded-md items-center justify-start' style={{
-                width: width * 1,
-                height: height * 0.07,
-                marginBottom: 15,
-                shadowColor: '#000',
-                shadowOffset: { width: 0, height: 10 },
-                shadowOpacity: 0.25,
-                shadowRadius: 15,
-                elevation: 8,
-            }}>
-                <TouchableOpacity>
-                    <Icon name="build" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-                <View className="px-3 flex-row">
-                    <Text className="font-bold text-xl">Customization and personalization</Text>
-                </View>
-                <TouchableOpacity style={{ position: "absolute", right: width * 0.01 }}>
-                    <Icon name="navigate-next" color="black" size={width * 0.07} />
-                </TouchableOpacity>
-            </View>
+                <View className="h-5"></View>
 
-            <View className='flex-1 justify-center items-center'>
-                        <TouchableOpacity className= 'w-[300px] h-[48px] rounded-md justify-center mt-4' style={{backgroundColor: '#F14C4C'}}>
-                            <Text className='text-white font-bold text-center text-2xl'>Logout</Text>
-                        </TouchableOpacity>
+                {/* Options */}
+                <View className="px-4">
+                <View className="bg-white flex-row px-4 rounded-md items-center justify-start shadow-2xl" style={{ width: width * 0.9, height: height * 0.07 }}>
+
+                    <TouchableOpacity>
+                        <Icon name="settings" color="#0CC0DF" size={width * 0.07} />
+                    </TouchableOpacity >
+                    <View className="px-3">
+                        <Text className="font-bold text-xl">Account Settings</Text>
                     </View>
+                    <TouchableOpacity style={{position: "absolute", right: width * 0.01 }}>
+                        <Icon name="navigate-next" color="#0CC0DF" size={width * 0.07} />
+                    </TouchableOpacity>
+                </View>
+                
 
-                    <View className='flex-1 justify-center items-center'>
-                        <TouchableOpacity className= 'w-[300px] h-[48px] rounded-md justify-center mb-6 mt-4' style={{backgroundColor: '#50C878'}}>
-                            <Text className='text-white font-bold text-center text-2xl'>Edit Profile</Text>
-                        </TouchableOpacity>
+                <View className="h-5"></View>
+
+                <View className='bg-white flex-row pl-4 rounded-md items-center justify-start shadow-2xl' style={{ width: width * 0.9, height: height * 0.07 }}>
+                    <TouchableOpacity>
+                        <Icon name="supervisor-account" color="#0CC0DF" size={width * 0.07} />
+                    </TouchableOpacity>
+                    <View className="px-3">
+                        <Text className="font-bold text-xl">Manage Users</Text>
                     </View>
-        </ScrollView>
+                    <TouchableOpacity style={{ position: "absolute",right: width * 0.01 }}>
+                        <Icon name="navigate-next" color="#0CC0DF" size={width * 0.07} />
+                    </TouchableOpacity>
+                </View>
+
+                <View className="h-5"></View>
+
+                <View className='bg-white flex-row pl-4 rounded-md items-center justify-start shadow-2xl' style={{ width: width * 0.9, height: height * 0.07 }}>
+                    <TouchableOpacity>
+                        <Icon name="build" color="#0CC0DF" size={width * 0.07} />
+                    </TouchableOpacity>
+                    <View className="px-3">
+                        <Text className="font-bold text-xl">Customization</Text>
+                    </View>
+                    <TouchableOpacity style={{position: "absolute",right: width * 0.01 }}>
+                        <Icon name="navigate-next" size={width * 0.07} color="#0CC0DF" />
+                    </TouchableOpacity>
+                </View>
+                </View>
+
+                <View className="h-5"></View>
+                {/* Buttons */}
+                <View className='flex-1 justify-center items-center'>
+                    <TouchableOpacity className='w-[300px] h-[48px] rounded-md justify-center mt-4' style={{ backgroundColor: '#F14C4C' }}>
+                        <Text className='text-white font-bold text-center text-2xl'>Logout</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View className='flex-1 justify-center items-center'>
+                    <TouchableOpacity className='w-[300px] h-[48px] rounded-md justify-center mb-6 mt-4' style={{ backgroundColor: '#50C878' }}>
+                        <Text className='text-white font-bold text-center text-2xl'>Edit Profile</Text>
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
+        </>
     );
 }

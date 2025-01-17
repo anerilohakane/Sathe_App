@@ -24,6 +24,7 @@ import Report from './Invoice/Report';
 import Invoice from './Invoice/Invoice';
 import SatheInvoice from './Invoice/satheInvoice';
 import InwardDetails from './Inward/inwardDetails';
+import HomeScreen from './Home/homeScreen';
 
 
 
@@ -32,7 +33,6 @@ export default function Layout() {
     <View>
       {/* <ProductDetails></ProductDetails> */}
       {/* <Product></Product> */}
-      {/* <HomeScreen /> */}
       {/* <Features></Features> */}
       {/* <AddWarehouse></AddWarehouse> */}
       {/* <UpdateWarehouse></UpdateWarehouse> */}
@@ -53,10 +53,11 @@ export default function Layout() {
       {/* <WarehouseList></WarehouseList> */}
       {/* <InvoiceList></InvoiceList> */}
       {/* <Customers></Customers> */}
-      {/* <Profile></Profile> */}
+      <Profile></Profile>
       {/* <Report></Report> */}
-      <Invoice></Invoice>
+      {/* <Invoice></Invoice> */}
       {/* <SatheInvoice></SatheInvoice> */}
+      {/* <HomeScreen></HomeScreen> */}
     </View>
   );
 }
