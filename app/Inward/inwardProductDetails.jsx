@@ -1,9 +1,12 @@
 import React from "react";
-import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, ScrollView, Image, TouchableOpacity,Dimensions, Platform} from "react-native";
+import { useState } from "react";
 import Icon from "react-native-vector-icons/MaterialIcons"; // For icons
 
+const { width, height } = Dimensions.get("window");
 
 export default function InwardProductDetails() {
+
     return (
         <ScrollView>
             {/* Header Section */}
@@ -65,7 +68,7 @@ export default function InwardProductDetails() {
                 { label: 'Quantity in kg', placeholder: 'Ex. 55000' },
                 { label: 'Rate', placeholder: 'Ex. 60000' },
                 { label: 'Amount', placeholder: 'Ex. 764000' },
-                { label: 'Date', placeholder: '12/12/2023' },
+                { label: 'Date', placeholder: "Ex. 2023/17/01"},
                 { label: 'Supplier Contact Number', placeholder: 'Ex. 7984527457' },
                 { label: 'Invoice ID', placeholder: 'Ex. 1250' },
                 { label: 'Remark/Notes', placeholder: '', multiline: true }
@@ -76,12 +79,11 @@ export default function InwardProductDetails() {
                         className='border border-blue-500 p-2 rounded-lg h-[48px]'
                         placeholder={field.placeholder}
                         multiline={field.multiline || false}
+                        onFocus={field.onPress} // Trigger date picker on focus
                     />
                 </View>
             ))}
-
-
-
+           
             <View className="flex-1 justify-center items-center px-4">
                 {/* Edit Details Button */}
                 <TouchableOpacity className="w-full sm:w-[358px] h-[48px] rounded-md justify-center mt-4" style={{ backgroundColor: '#0CC0DF' }}>

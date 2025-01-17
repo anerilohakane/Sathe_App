@@ -12,7 +12,6 @@ import Catagories from './Category/categories';
 import CatagoryDetails from './Category/catagoryDetails';
 import TransportManagement from './Transport/TransportManagement';
 import TransportOverView from './Transport/TransportOverview';
-import InwardDetails from './Inward/inwardProductDetails';
 import Inward from './Inward/inward';
 import InwardProductDetails from './Inward/inwardProductDetails';
 import OutwardProductDetails from './Outward/outwardProductDetails';
@@ -24,6 +23,8 @@ import Profile from './Home/Profile';
 import Report from './Invoice/Report';
 import Invoice from './Invoice/Invoice';
 import SatheInvoice from './Invoice/satheInvoice';
+import InwardDetails from './Inward/inwardDetails';
+
 
 
 export default function Layout() {
@@ -52,9 +53,9 @@ export default function Layout() {
       {/* <WarehouseList></WarehouseList> */}
       {/* <InvoiceList></InvoiceList> */}
       {/* <Customers></Customers> */}
-      <Profile></Profile>
+      {/* <Profile></Profile> */}
       {/* <Report></Report> */}
-      {/* <Invoice></Invoice> */}
+      <Invoice></Invoice>
       {/* <SatheInvoice></SatheInvoice> */}
     </View>
   );

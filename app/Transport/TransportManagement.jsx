@@ -1,12 +1,33 @@
 import { useState } from "react";
 import { FlatList } from "react-native";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, Platform } from "react-native";
 import { ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function TransportManagement() {
     const [vehicleType, setVehicleType] = useState('');
     const [showDropdown, setShowDropdown] = useState(false);
+     const [selectedDate, setSelectedDate] = useState(new Date());
+        const [showPicker, setShowPicker] = useState(false);
+        const [mode, setMode] = useState('date'); // 'date' or 'time'
+    
+        const handleDateChange = (event, date) => {
+            const currentDate = date || selectedDate;
+            setShowPicker(false); // Hide picker after selection
+            setSelectedDate(currentDate);
+        };
+    
+        const showDatePicker = () => {
+            setMode('date');
+            setShowPicker(true);
+        };
+
+        const showTimePicker = () => {
+            setMode('time');
+            setShowPicker(true);
+          };
+    
 
     const vehicleTypes = ['Truck', 'Chhota Hathi', 'Bolero Pickup', 'Piaggio Ape', 'Maruti Suzuki Super Carry', 'Tanker Trucks', 'Insulated Containers', 'Electric Milk Transport Vehicles'];
 
@@ -75,8 +96,8 @@ export default function TransportManagement() {
                                                 onPress={() => {
                                                     setVehicleType(item);
                                                     setShowDropdown(false);
-                                                }}
-                                            >
+                                                }}>
+                                            
                                                 <Text className="text-gray-700">{item}</Text>
                                             </TouchableOpacity>
                                         )}
@@ -91,16 +112,28 @@ export default function TransportManagement() {
                         )}
                     </View>
                 ))}
+                {/* Date Picker */}
+            {showPicker && (
+                <DateTimePicker
+                    value={selectedDate}
+                    mode={mode}
+                    is24Hour={true}
+                    display={Platform.OS === 'android' ? 'spinner' : 'default'}
+                    onChange={handleDateChange}
+                />
+            )}
             </View>
 
 
             <View className="px-4 flex-row justify-between items-center bottom-6">
-                <Text className="text-lg font-medium mb-3">Arrival Date/Time</Text>
-                <Text className="text-lg font-medium mb-3 right-14">Transport Date</Text>
+                <Text className="text-lg font-medium mb-3">Arrival Date</Text>
+                <Text className="text-lg font-medium mb-3">Arrival Time</Text>
+                <Text className="text-lg font-medium mb-3 ">Transport Date</Text>
             </View>
-            <View className="px-4 flex-row justify-between items-center gap-2 bottom-6">
-                <TextInput className="border border-blue-500 p-3 rounded-md h-[50px] w-[165px]" placeholder="Ex. 2023/10/10  14:00"></TextInput>
-                <TextInput className="border border-blue-500 p-3 rounded-md h-[50px] w-[165px]" placeholder="Ex. 2023/10/09"></TextInput>
+            <View className="px-4 flex-row justify-between items-center gap-1 bottom-6">
+                <TextInput className="border border-blue-500 p-3 rounded-md h-[50px] w-auto" placeholder={selectedDate.toLocaleDateString()} onPress={showDatePicker}></TextInput>
+                <TextInput className="border border-blue-500 p-3 rounded-md h-[50px] w-[100px]" placeholder={selectedDate.toLocaleTimeString()}  onPress={showTimePicker}></TextInput>
+                <TextInput className="border border-blue-500 p-3 rounded-md h-[50px] w-auto" placeholder={selectedDate.toLocaleDateString()}  onPress={showDatePicker}></TextInput>
             </View>
 
             <View className="p-5 bottom-6">

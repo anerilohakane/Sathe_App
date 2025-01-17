@@ -1,10 +1,29 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, Image, TouchableOpacity, Dimensions } from "react-native";
+import { View, Text, FlatList, Image, TouchableOpacity, Dimensions, Platform } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons"; // For icons
+import DateTimePicker from '@react-native-community/datetimepicker';
+
 
 const { width, height } = Dimensions.get("window");
 
 export default function Report() {
+
+    const [vehicleType, setVehicleType] = useState('');
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [showPicker, setShowPicker] = useState(false);
+    const [mode, setMode] = useState('date'); // 'date' or 'time'
+
+    const handleDateChange = (event, date) => {
+        const currentDate = date || selectedDate;
+        setShowPicker(false); // Hide picker after selection
+        setSelectedDate(currentDate);
+    };
+
+    const showDatePicker = () => {
+        setMode('date');
+        setShowPicker(true);
+    };
 
     // Data for the report
     const Data = [
@@ -78,6 +97,16 @@ export default function Report() {
                             <Icon name="menu" color="white" size={width * 0.1} />
                         </TouchableOpacity>
                     </View>
+                    {/* Date Picker */}
+                    {showPicker && (
+                        <DateTimePicker
+                            value={selectedDate}
+                            mode={mode}
+                            is24Hour={true}
+                            display={Platform.OS === 'android' ? 'spinner' : 'default'}
+                            onChange={handleDateChange}
+                        />
+                    )}
 
                     {/* Spacing */}
                     <View className="h-6" />
@@ -85,11 +114,11 @@ export default function Report() {
                     {/* Header Data Section */}
                     <View className="bg-gray-100 w-full h-[130px]">
                         <View className="flex-row justify-between items-center px-2 top-4 gap-2">
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }}>
-                                <Text className="text-lg font-normal">Start Date:2023/01/01</Text>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }} onPress={showDatePicker}>
+                                <Text className="text-lg font-normal">StartDate:{selectedDate.toLocaleDateString()}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }}>
-                                <Text className="text-lg font-normal">End Date:2023/12/31</Text>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }} onPress={showDatePicker}>
+                                <Text className="text-lg font-normal">End Date:{selectedDate.toLocaleDateString()}</Text>
                             </TouchableOpacity>
                         </View>
                         <View className="px-2 top-6">
