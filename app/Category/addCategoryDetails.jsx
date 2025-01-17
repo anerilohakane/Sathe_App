@@ -9,8 +9,8 @@ export default function AddCategory() {
                 <Image className='w-12 h-12 rounded-full' source={require("../../assets/images/1.png")} />
                 <Text className='font-semibold text-white text-3xl'>Category Details</Text>
                 <TouchableOpacity>
-                                    <Icon name="menu" color="white" size={46}></Icon>
-                                </TouchableOpacity>
+                    <Icon name="menu" color="white" size={46}></Icon>
+                </TouchableOpacity>
             </View>
 
             {/* Spacing */}
@@ -27,7 +27,7 @@ export default function AddCategory() {
             {[
                 { label: 'Category Name', placeholder: 'Ex. Cheese' },
                 { label: 'Subcategory', placeholder: 'Ex. Cream Cheese' },
-                { label: 'Description', placeholder: '' , multiline: true},
+                { label: 'Description', placeholder: '', multiline: true },
             ].map((field, index) => (
                 <View key={index} className='mb-5 px-4'>
                     <Text className='text-xl font-normal mb-2'>{field.label}</Text>

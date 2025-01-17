@@ -85,15 +85,15 @@ export default function Report() {
                     {/* Header Data Section */}
                     <View className="bg-gray-100 w-full h-[130px]">
                         <View className="flex-row justify-between items-center px-2 top-4 gap-2">
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.5, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">Start Date:2023/01/01</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.5, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">End Date:2023/12/31</Text>
                             </TouchableOpacity>
                         </View>
                         <View className="px-2 top-6">
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.5, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.5, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">Category:Inward</Text>
                             </TouchableOpacity>
                         </View>
@@ -105,13 +105,13 @@ export default function Report() {
                     <View className="bg-gray-100 w-full h-[80px] top-3">
                         <View className="h-2"></View>
                         <View className="flex-row justify-evenly items-center px-2 top-2 gap-2">
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.3, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.3, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">Sort by Date</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.3, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.3, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">Sort by Mode</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{width:width*0.3, height:height*0.06}}>
+                            <TouchableOpacity className="bg-white justify-center items-center rounded-lg" style={{ width: width * 0.3, height: height * 0.06 }}>
                                 <Text className="text-lg font-normal">Sort by Status</Text>
                             </TouchableOpacity>
                         </View>

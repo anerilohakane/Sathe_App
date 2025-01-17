@@ -5,7 +5,7 @@ import Product from './Products/product';
 import ProductDetails from './Products/productDetails';
 import AddWarehouse from './Warehouse/addWarehouseDetails';
 import UpdateWarehouse from './Warehouse/updateWarehouseDetails';
-import Login from './login';
+import Login from './Home/login';
 import AddCustomer from './Customers/addCustomerDetails';
 import AddCategory from './Category/addCategoryDetails';
 import Catagories from './Category/categories';
@@ -20,7 +20,7 @@ import Outward from './Outward/outward';
 import WarehouseList from './Warehouse/WarehouseList';
 import InvoiceList from './Invoice/InvoiceList';
 import Customers from './Customers/customers';
-import Profile from './Profile';
+import Profile from './Home/Profile';
 import Report from './Invoice/Report';
 import Invoice from './Invoice/Invoice';
 import SatheInvoice from './Invoice/satheInvoice';
@@ -52,10 +52,10 @@ export default function Layout() {
       {/* <WarehouseList></WarehouseList> */}
       {/* <InvoiceList></InvoiceList> */}
       {/* <Customers></Customers> */}
-      {/* <Profile></Profile> */}
+      <Profile></Profile>
       {/* <Report></Report> */}
       {/* <Invoice></Invoice> */}
-      <SatheInvoice></SatheInvoice>
+      {/* <SatheInvoice></SatheInvoice> */}
     </View>
   );
 }

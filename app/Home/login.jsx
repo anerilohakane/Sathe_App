@@ -13,7 +13,7 @@ export default function Login() {
 
       <Image
         className="justify-center items-center"
-        source={require("../assets/images/GroupImg.png")}
+        source={require("../../assets/images/GroupImg.png")}
         style={{ width: width, height: 350 }} />
 
 

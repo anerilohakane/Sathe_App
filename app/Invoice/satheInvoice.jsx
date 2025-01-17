@@ -212,7 +212,7 @@ export default function SatheInvoice() {
                             
                         </TouchableOpacity>
                     
-                    <View className="h-40"></View>
+                    <View className="h-20"></View>
                 </View>
             }
         />

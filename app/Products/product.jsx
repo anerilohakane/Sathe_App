@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/MaterialIcons"; // For icons
 
 export default function Product() {
     return (
@@ -8,7 +9,9 @@ export default function Product() {
             <View className='flex-row rounded-md items-center justify-between px-4 py-3' style={{ backgroundColor: "#0CC0DF" }} >
                 <Image className='w-12 h-12 rounded-full' source={require("../../assets/images/1.png")} />
                 <Text className='font-semibold text-white text-3xl'>Product Details</Text>
-                <Image className='w-12 h-12' source={require("../../assets/images/Menu.png")} />
+                <TouchableOpacity>
+                    <Icon name="menu" color="white" size={width * 0.1} />
+                </TouchableOpacity>
             </View>
 
 
@@ -60,7 +63,7 @@ export default function Product() {
                     <TouchableOpacity
                         className='w-full h-[40px] rounded-md justify-center'
                         style={{ backgroundColor: '#0CC0DF' }}>
-                  
+
                         <Text className='text-white font-bold text-center text-xl'>Add Vegis</Text>
                     </TouchableOpacity>
                 </View>

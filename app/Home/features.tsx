@@ -10,9 +10,9 @@ export default function Features() {
         <ScrollView>
             {/* Header Section */}
             <View style={[styles.header, styles.row]}>
-                <Image style={styles.headerIcon} source={require("../assets/images/1.png")} />
+                <Image style={styles.headerIcon} source={require("../../assets/images/1.png")} />
                 <Text style={styles.headerTitle}>Features</Text>
-                <Image style={styles.headerIcon} source={require("../assets/images/Menu.png")} />
+                <Image style={styles.headerIcon} source={require("../../assets/images/Menu.png")} />
             </View>
 
             <View style={styles.spacer} />
@@ -23,25 +23,25 @@ export default function Features() {
                         count: 80,
                         label: "INWARD",
                         description: "Receive and Store Products",
-                        topRightImage: require("../assets/images/CustomsAgent.png"),
+                        topRightImage: require("../../assets/images/CustomsAgent.png"),
                     },
                     {
                         count: 50,
                         label: "OUTWARD",
                         description: "Dispatch Finish Goods",
-                        topRightImage: require("../assets/images/Truck.png"),
+                        topRightImage: require("../../assets/images/Truck.png"),
                     },
                     {
                         count: 20,
                         label: "TRANSPORT",
                         description: "Track Vehicle and Driver Information",
-                        topRightImage: require("../assets/images/3d truck.png"),
+                        topRightImage: require("../../assets/images/3d truck.png"),
                     },
                     {
                         count: null,
                         label: "INVOICE",
                         description: "Manage Billing and Transactions",
-                        leftImage: require("../assets/images/Paper.png"),
+                        leftImage: require("../../assets/images/Paper.png"),
                     },
                 ].map((item, index) => (
                     <View key={index} style={styles.card}>
@@ -74,7 +74,7 @@ export default function Features() {
                         <View className="rounded-tl-2xl" style={styles.bottomRightContainer}>
                             <Image
                                 style={styles.bottomRightImage}
-                                source={require("../assets/images/Next.png")}
+                                source={require("../../assets/images/Next.png")}
                             />
                         </View>
                     </View>
@@ -85,13 +85,13 @@ export default function Features() {
                     <View className="w-[369px] h-[174px] rounded-lg items-center justify-center " style={{ backgroundColor: "#00B4D8" }}>
 
                         <TouchableOpacity className="flex flex-row items-center justify-center gap-2 h-full w-4/5">
-                            <Image source={require("../assets/images/Product.png")}></Image>
+                            <Image source={require("../../assets/images/Product.png")}></Image>
 
-                            <Image source={require("../assets/images/Warehouse.png")}></Image>
+                            <Image source={require("../../assets/images/Warehouse.png")}></Image>
 
-                            <Image source={require("../assets/images/Customer.png")}></Image>
+                            <Image source={require("../../assets/images/Customer.png")}></Image>
 
-                            <Image source={require("../assets/images/Category.png")}></Image>
+                            <Image source={require("../../assets/images/Category.png")}></Image>
 
                         </TouchableOpacity>
 

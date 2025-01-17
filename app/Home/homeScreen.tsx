@@ -8,9 +8,9 @@ export default function HomeScreen() {
         <ScrollView>
             {/* Header Section */}
             <View style={[styles.header, styles.row]}>
-                <Image style={styles.headerIcon} source={require("../assets/images/1.png")} />
+                <Image style={styles.headerIcon} source={require("../../assets/images/1.png")} />
                 <Text style={styles.headerTitle}>Home</Text>
-                <Image style={styles.headerIcon} source={require("../assets/images/Menu.png")} />
+                <Image style={styles.headerIcon} source={require("../../assets/images/Menu.png")} />
             </View>
 
             <View style={styles.spacer} />
@@ -21,31 +21,31 @@ export default function HomeScreen() {
                         count: 80,
                         label: "INWARD",
                         description: "Receive and Store Products",
-                        topRightImage: require("../assets/images/CustomsAgent.png"),
+                        topRightImage: require("../../assets/images/CustomsAgent.png"),
                     },
                     {
                         count: 50,
                         label: "OUTWARD",
                         description: "Dispatch Finish Goods",
-                        topRightImage: require("../assets/images/Truck.png"),
+                        topRightImage: require("../../assets/images/Truck.png"),
                     },
                     {
                         count: 20,
                         label: "TRANSPORT",
                         description: "Track Vehicle and Driver Information",
-                        topRightImage: require("../assets/images/3d truck.png"),
+                        topRightImage: require("../../assets/images/3d truck.png"),
                     },
                     {
                         count: null,
                         label: "INVOICE",
                         description: "Manage Billing and Transactions",
-                        leftImage: require("../assets/images/Paper.png"),
+                        leftImage: require("../../assets/images/Paper.png"),
                     },
                     {
                         count: null,
                         label: "REPORT",
                         description: "Track Inventory and Operational Trends",
-                        leftImage: require("../assets/images/Statistics.png"),
+                        leftImage: require("../../assets/images/Statistics.png"),
                     },
                 ].map((item, index) => (
                     <View key={index} style={styles.card}>
@@ -77,7 +77,7 @@ export default function HomeScreen() {
                         <View className="rounded-tl-2xl" style={styles.bottomRightContainer}>
                             <Image
                                 style={styles.bottomRightImage}
-                                source={require("../assets/images/Next.png")}
+                                source={require("../../assets/images/Next.png")}
                             />
                         </View>
                     </View>

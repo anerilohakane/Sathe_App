@@ -9,7 +9,7 @@ export default function Profile() {
         <ScrollView>
             {/* Header Section */}
             <View className='flex-row rounded-md items-center justify-between px-4 py-3' style={{ backgroundColor: "#0CC0DF" }} >
-                <Image className='w-12 h-12 rounded-full' source={require("../assets/images/1.png")} />
+                <Image className='w-12 h-12 rounded-full' source={require("../../assets/images/1.png")} />
                 <Text className='font-semibold text-white text-3xl'>User Profile</Text>
                 <TouchableOpacity>
                     <Icon name="menu" color="white" size={width * 0.1} /> {/* Adjusted icon size */}
@@ -20,7 +20,7 @@ export default function Profile() {
             <View className='h-10' />
 
             <View className="flex-col justify-center items-center">
-                <Image style={{ width: width * 0.22, height: height * 0.1 }} source={require("../assets/images/Profile.png")} />
+                <Image style={{ width: width * 0.22, height: height * 0.1 }} source={require("../../assets/images/Profile.png")} />
             </View>
 
             <View className='h-8' />
